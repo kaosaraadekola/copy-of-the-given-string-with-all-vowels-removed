@@ -1,10 +1,28 @@
-/** Adds two given numbers, returning the sum.
- * @param {number} a
- * @param {number} b
- * @returns {number} the sum of a and b
+/** Return a copy of the given string, with all vowels removed
+ * removingVowels 
+ * @param {string} inputString
+ * @returns {string}
  */
-function sum(a, b) {
-    return a + b;
+
+function removingVowels(inputString) {
+   
+    let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+
+    let result = "";
+
+    
+    for (let letters of inputString) {
+       
+        if (!vowels.includes(letters)) {
+           
+            result += letters;
+        }
+    }
+
+
+    return result;
 }
 
-export { sum };
+console.log(removingVowels("Hello World")); 
+
+export { removingVowels };

@@ -1,12 +1,24 @@
-import { sum } from "./sum.js";
+import { removingVowels } from "./sum.js";
 
 // jest docs for expect "matchers"
 // https://jestjs.io/docs/expect
 
-test("adds 1 + 2 to equal 3", () => {
-    expect(sum(1, 2)).toBe(3);
+test("removing the vowels from hello", () => {
+    expect(removingVowels("Hello")).toEqual("Hll");
 });
 
-test("adds 10 + 20 to equal 30", () => {
-    expect(sum(10, 20)).toBe(30);
+test("removing the vowels from naz", () => {
+    expect(removingVowels("naz")).toEqual("nz");
+});
+
+test("removing the vowels from huss", () => {
+    expect(removingVowels("huss")).toEqual("hss");
+});
+
+test("removing the vowels from It's Monday today", () => {
+    expect(removingVowels("It's Monday today")).toEqual("t's Mndy tdy");
+});
+
+test("removing the vowels from ", () => {
+    expect(removingVowels("")).toEqual("");
 });
